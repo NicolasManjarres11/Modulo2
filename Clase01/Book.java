@@ -43,7 +43,7 @@ public class Book {
 
     }
 
-    public void printBook(){
+    public void showInfo(){
         System.out.println("Title: "+ title);
         System.out.println("Author: "+ author);
         System.out.println("Year: "+ year);
@@ -52,15 +52,20 @@ public class Book {
     }
 
     public void getBook(){
-        System.out.println("El libro: "+title +"Ha sido devuelto");
-
-        
-    }
-
-    public void returbook(){
         if(!isBusy){
             isBusy = true;
-            System.out.println("El libro: "+title +"Ha sido devuelto");
+            System.out.println("El libro: "+title +" Ha sido prestado");
+        } else {
+            System.out.println("El libro: "+title +" ya esta prestado");
+        }
+    }
+
+    public void returnbook(){
+        if(isBusy){
+            isBusy = false;
+            System.out.println("El libro: "+title +" Ha sido devuelto");
+        } else {
+            System.out.println("El libro: "+title +" no ha sido devuelto");
         }
     }
 
