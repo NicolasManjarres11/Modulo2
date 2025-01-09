@@ -1,21 +1,23 @@
 public class TarjetaCredito implements MetodoPago{
 
     @Override
-    public void procesarPago() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'procesarPago'");
+    public void procesarPago(double monto) {
+        if (validarMonto(monto)){
+            System.out.println("Pago de "+monto+" procesado con la tarjeta de credito");
+        } else {
+            System.out.println("Monto invalido para tarjeta de credito");
+        }
     }
 
     @Override
     public String obtenerDetalles() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'obtenerDetalles'");
+        
+        return "Se realizara los pagos con la tarjeta de credito";
     }
 
     @Override
     public boolean validarMonto(double monto) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'validarMonto'");
+        return monto > 0;
     }
 
 }

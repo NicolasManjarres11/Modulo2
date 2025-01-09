@@ -1,6 +1,6 @@
 public interface MetodoPago {
 
-    void procesarPago();
+    void procesarPago(double monto);
     String obtenerDetalles();
     boolean validarMonto(double monto);
     
