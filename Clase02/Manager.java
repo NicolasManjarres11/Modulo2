@@ -1,4 +1,3 @@
-package Clase02;
 
 public class Manager extends Employee{
 
